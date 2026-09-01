@@ -1119,16 +1119,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Ping is successful\", function () {",
-              "    pm.response.to.be.success;",
-              "});",
-              "",
-              "pm.test(\"Status code is 200\", function () {",
-              "pm.test("Successful status code is 200 or 201", function () {
-    pm.expect(pm.response.code).to.be.oneOf([200, 201]);
-});",
-              "",
-              "postman.setNextRequest(null);"
+              "pm.test(\"Ping is successful\", function () {\n    pm.response.to.be.success;\n});\n\npm.test(\"Successful status code is 200 or 201\", function () {\n    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\n});\n\npostman.setNextRequest(null);"
             ]
           }
         }
