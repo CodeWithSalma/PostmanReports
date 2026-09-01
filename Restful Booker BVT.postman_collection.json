@@ -1124,8 +1124,8 @@
               "});",
               "",
               "pm.test(\"Status code is 200\", function () {",
-              "pm.test("Status code is success", function () {
-    pm.response.to.have.status.oneOf([200, 201]);
+              "pm.test("Successful status code is 200 or 201", function () {
+    pm.expect(pm.response.code).to.be.oneOf([200, 201]);
 });",
               "",
               "postman.setNextRequest(null);"
